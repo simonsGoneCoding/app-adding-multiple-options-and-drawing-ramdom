@@ -24,4 +24,22 @@ btnAdd.addEventListener('click', (e) => {
     }
 })
 
-//----reset-----
+//-----reset------
+btnReset.addEventListener('click', (e) => {
+    e.preventDefault();
+    choices.length = 0;
+    alert('all choices cleared');
+    text.textContent = '';
+})
+
+//----show random index from choices array------
+btnShow.addEventListener('click', () => {
+    const index = Math.floor(Math.random() * choices.length);
+    text.textContent = choices[index];
+})
+
+//----show all indexes from choices array------
+btnShowAll.addEventListener('click', () => {
+    text.textContent = choices;
+
+})
